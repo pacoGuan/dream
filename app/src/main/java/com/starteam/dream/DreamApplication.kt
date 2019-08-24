@@ -1,0 +1,12 @@
+package com.starteam.dream
+
+import android.app.Application
+import timber.log.Timber
+
+class DreamApplication : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+        if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
+    }
+}
